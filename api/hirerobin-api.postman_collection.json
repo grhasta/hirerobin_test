@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "c1fb16ba-26af-40c4-8d69-071b53500c4c",
+		"name": "hirerobin-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"budi@gmail.com\",\n\t\"password\": \"passwordbudi\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/api/authenticate",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\n\t\"password\": \"passwordpepe\",\n\t\"email\": \"popo@gmail.com\",\n\t\"reviewer\": true\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/api/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rate_list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1ZGlAZ21haWwuY29tIiwiaWF0IjoxNTY0MzE0NzcxLCJleHAiOjE1NjQzMTgzNzF9.KURsENw9BA_UFg9RLexYL4M4H1Tjfpdne2kTdM7_jMQ\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/api/rates",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"rates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "skill_list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1ZGlAZ21haWwuY29tIiwiaWF0IjoxNTY0MzE0NzcxLCJleHAiOjE1NjQzMTgzNzF9.KURsENw9BA_UFg9RLexYL4M4H1Tjfpdne2kTdM7_jMQ\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/api/skills",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reviewed_id\": \"5d3d8a2d72322007886357d5\",\n\t\"rate\": \"5d3d3d0a2701b02bc96dc334\",\n\t\"reviewer_capacity\": \"Supervisor\",\n\t\"origin\": \"Office\",\n\t\"contribution\": 8,\n\t\"skill\": \"5d3d3d0a2701b02bc96dc32f\",\n\t\"key_strength\": \"Absolute mad\",\n\t\"offers\": true\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/api/feedback",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
